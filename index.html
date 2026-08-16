@@ -22,31 +22,28 @@
 <nav class="navbar navbar-expand-md custom-navbar">
     <div class="container-fluid">
         
-        <!-- اللوجو على اليسار -->
+        <!-- الشعار على اليسار (أو اليمين حسب اتجاه الصفحة) -->
         <a class="navbar-brand logo" href="#">Landing Page</a>
 
-        <!-- حقل البحث يظل ظاهراً دائماً بجانب الأزرار -->
-        <form class="d-flex search-box me-2" role="search">
-            <input class="form-control" type="search" placeholder="Search" aria-label="Search">
-        </form>
+        <!-- العناصر الخاصة بالموبايل/الشاشات الصغيرة (الزر وحقل البحث) -->
+        <div class="d-flex align-items-center gap-2 order-md-last">
+            <!-- حقل البحث سيكون على أقصى اليسار في الشاشات الكبيرة -->
+            <form class="search-box" role="search">
+                <input class="form-control" type="search" placeholder="Search" aria-label="Search">
+            </form>
 
-        <!-- زر القائمة التلقائي من بوتستراب -->
-        <button class="navbar-toggler menu-toggle" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
+            <!-- زر القائمة التلقائي من بوتستراب -->
+            <button class="navbar-toggler menu-toggle" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
 
-        <!-- محتوى القائمة (الكلاس mx-auto هو المسؤول عن توسيط الروابط في المنتصف) -->
+        <!-- محتوى القائمة متمركز في المنتصف -->
         <div class="collapse navbar-collapse" id="navbarContent">
             <ul class="navbar-nav mx-auto mb-2 mb-md-0 nav-links">
-                <li class="nav-item">
-                    <a class="nav-link active" href="#">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Features</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Pricing</a>
-                </li>
+                <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Features</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Pricing</a></li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         Dropdown
@@ -60,8 +57,7 @@
         </div>
 
     </div>
-</nav>
-    <!-- Welcome Section -->
+</nav>    <!-- Welcome Section -->
     <section class="welcome">
         <h1>Welcome to Our Website</h1>
         <p class="subtitle">Your go-to platform for amazing features.</p>
