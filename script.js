@@ -4,7 +4,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (menuToggle && navLinks) {
         menuToggle.addEventListener('click', () => {
-            // إضافة أو إزالة الكلاس active لإظهار/إخفاء القائمة
             navLinks.classList.toggle('active');
         });
     }
