@@ -19,48 +19,48 @@
 <body>
 
     <!-- Bootstrap Navbar -->
-    <nav class="navbar navbar-expand-md custom-navbar">
-        <div class="container-fluid">
-            
-            <a class="navbar-brand logo" href="#">Landing Page</a>
+<nav class="navbar navbar-expand-md custom-navbar">
+    <div class="container-fluid">
+        
+        <!-- اللوجو على اليسار -->
+        <a class="navbar-brand logo" href="#">Landing Page</a>
 
-            <!-- زر القائمة التلقائي من بوتستراب -->
-            <button class="navbar-toggler menu-toggle" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+        <!-- حقل البحث يظل ظاهراً دائماً بجانب الأزرار -->
+        <form class="d-flex search-box me-2" role="search">
+            <input class="form-control" type="search" placeholder="Search" aria-label="Search">
+        </form>
 
-            <!-- محتوى القائمة المنطوية -->
-            <div class="collapse navbar-collapse" id="navbarContent">
-                <ul class="navbar-nav me-auto mb-2 mb-md-0 nav-links">
-                    <li class="nav-item">
-                        <a class="nav-link active" href="#">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Features</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Pricing</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            Dropdown
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">Option 1</a></li>
-                            <li><a class="dropdown-item" href="#">Option 2</a></li>
-                        </ul>
-                    </li>
-                </ul>
+        <!-- زر القائمة التلقائي من بوتستراب -->
+        <button class="navbar-toggler menu-toggle" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
 
-                <!-- حقل البحث -->
-                <form class="d-flex search-box" role="search">
-                    <input class="form-control" type="search" placeholder="Search" aria-label="Search">
-                </form>
-            </div>
-
+        <!-- محتوى القائمة (الكلاس mx-auto هو المسؤول عن توسيط الروابط في المنتصف) -->
+        <div class="collapse navbar-collapse" id="navbarContent">
+            <ul class="navbar-nav mx-auto mb-2 mb-md-0 nav-links">
+                <li class="nav-item">
+                    <a class="nav-link active" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Features</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Pricing</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Dropdown
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Option 1</a></li>
+                        <li><a class="dropdown-item" href="#">Option 2</a></li>
+                    </ul>
+                </li>
+            </ul>
         </div>
-    </nav>
 
+    </div>
+</nav>
     <!-- Welcome Section -->
     <section class="welcome">
         <h1>Welcome to Our Website</h1>
