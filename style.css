@@ -13,9 +13,7 @@ html, body {
     color: #333;
 }
 
-/* ==========================================
-   1. شريط الملاحة (Custom Bootstrap Navbar)
-   ========================================== */
+ /* إnav bar */
 .custom-navbar {
     background-color: #ff7f66 !important;
     padding: 12px 30px;
@@ -41,7 +39,6 @@ html, body {
     font-weight: 600;
 }
 
-/* زر القائمة المنسدلة الخاص ببوتستراب */
 .custom-navbar .navbar-toggler {
     border-color: rgba(255, 255, 255, 0.5);
 }
@@ -58,11 +55,9 @@ html, body {
     padding: 6px 12px;
 }
 .custom-navbar .menu-toggle {
-    margin-right: 8px; /* إضافة مسافة فاصلة بين الزر ومربع البحث */
+    margin-right: 8px; 
 }
-/* ==========================================
-   2. قسم الترحيب (Welcome Section)
-   ========================================== */
+ /* إwelcome */
 .welcome {
     text-align: center;
     padding: 50px 20px 30px;
@@ -100,9 +95,7 @@ html, body {
     box-shadow: 0 4px 10px rgba(0, 153, 184, 0.3);
 }
 
-/* ==========================================
-   3. قسم الميزات (Features Section - CSS Grid)
-   ========================================== */
+ /* features */
 .features {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -138,9 +131,7 @@ html, body {
     color: #666;
 }
 
-/* ==========================================
-   4. التجاوب مع الشاشات (Responsive Design)
-   ========================================== */
+ /* responsive */
 
 @media (max-width: 900px) {
     .features {
@@ -178,7 +169,7 @@ html, body {
     }
 
     .search-box input {
-      width: 90px; /* تصغير مدمج ومناسب للشاشات الصغيرة */
+      width: 90px; 
         padding: 4px 8px;
         font-size: 0.75rem;
     }
