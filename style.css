@@ -11,7 +11,6 @@ body {
 }
 
 /* ==========================================
-   1. شريط الملاحة (Navbar)
    ========================================== */
 .navbar {
     background-color: #ff7f66;
@@ -20,7 +19,7 @@ body {
     align-items: center;
     padding: 15px 40px;
     color: white;
-    position: relative; /* لتحديد موقع القائمة عند فتحها في الموبايل */
+    position: relative; 
 }
 
 .logo {
@@ -44,7 +43,7 @@ body {
     font-size: 0.85rem;
 }
 
-/* زر القائمة مخفي افتراضياً في الشاشات الكبيرة */
+/* زر القائمة  */
 .menu-toggle {
     display: none;
     background: none;
@@ -55,7 +54,6 @@ body {
 }
 
 /* ==========================================
-   2. قسم الترحيب (Welcome Section)
    ========================================== */
 .welcome {
     text-align: center;
@@ -94,7 +92,6 @@ body {
 }
 
 /* ==========================================
-   3. قسم الميزات باستعمال CSS Grid
    ========================================== */
 .features {
     display: grid;
@@ -131,7 +128,7 @@ body {
 }
 
 /* ==========================================
-   4. التجاوب مع الشاشات (Responsive Design)
+  (Responsive)
    ========================================== */
 
 @media (max-width: 900px) {
@@ -140,18 +137,17 @@ body {
     }
 }
 
-/* تحويل القائمة لزر عند صغر الشاشة (أقل من 768px) */
 @media (max-width: 768px) {
     .menu-toggle {
-        display: block; /* إظهار زر القائمة */
+        display: block; 
     }
 
     .search-box {
-        display: none; /* إخفاء حقل البحث للحفاظ على بساطة الشاشة */
+        display: none; 
     }
 
     .nav-links {
-        display: none; /* إخفاء روابط القائمة افتراضياً */
+        display: none; 
         flex-direction: column;
         position: absolute;
         top: 100%;
@@ -168,7 +164,6 @@ body {
         margin: 10px 0;
     }
 
-    /* كلاس يتم إضافته بالجافاسكريبت لإظهار القائمة */
     .nav-links.active {
         display: flex;
     }
