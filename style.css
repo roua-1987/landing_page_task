@@ -1,3 +1,6 @@
+/* ==========================================
+   1. الإعدادات العامة وإصلاح الـ Overflow
+   ========================================== */
 * {
     margin: 0;
     padding: 0;
@@ -5,26 +8,32 @@
     font-family: 'Poppins', sans-serif;
 }
 
-body {
+html, body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden; /* يمنع خروج العناصر والتمرير الأفقي كلياً */
     background-color: #f8fafc;
     color: #333;
 }
 
 /* ==========================================
+   2. شريط الملاحة (Navbar)
    ========================================== */
 .navbar {
     background-color: #ff7f66;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 40px;
+    padding: 15px 30px;
     color: white;
-    position: relative; 
+    position: relative;
+    width: 100%;
 }
 
 .logo {
     font-weight: 700;
     font-size: 1.2rem;
+    white-space: nowrap;
 }
 
 .nav-links a {
@@ -41,9 +50,9 @@ body {
     border-radius: 4px;
     outline: none;
     font-size: 0.85rem;
+    max-width: 100%;
 }
 
-/* زر القائمة  */
 .menu-toggle {
     display: none;
     background: none;
@@ -54,10 +63,12 @@ body {
 }
 
 /* ==========================================
+   3. قسم الترحيب (Welcome Section)
    ========================================== */
 .welcome {
     text-align: center;
-    padding: 60px 20px 30px;
+    padding: 50px 20px 30px;
+    width: 100%;
 }
 
 .welcome h1 {
@@ -92,6 +103,7 @@ body {
 }
 
 /* ==========================================
+   4. قسم الميزات (Features Section)
    ========================================== */
 .features {
     display: grid;
@@ -100,6 +112,7 @@ body {
     padding: 20px;
     max-width: 900px;
     margin: 0 auto;
+    width: 100%;
 }
 
 .card {
@@ -127,44 +140,36 @@ body {
     color: #666;
 }
 
-/* ===========================================
-  (Responsive)
+/* ==========================================
+   5. التجاوب مع الشاشات (Responsive Design)
    ========================================== */
+
 @media (max-width: 900px) {
     .features {
         grid-template-columns: repeat(2, 1fr);
     }
 }
 
-/* ==========================================
-   التجاوب المحسّن للموبايل والشاشات الصغيرة
-   ========================================== */
-
 @media (max-width: 768px) {
-    /* 1. ضبط الهيدر ليكون مرتباً بدون ازدحام */
     .navbar {
-        padding: 10px 15px;
-        gap: 8px;
+        padding: 12px 15px;
     }
 
     .logo {
-        font-size: 0.95rem; /* تصغير اسم الموقع قليلاً */
-        white-space: nowrap;
+        font-size: 1rem;
     }
 
     .menu-toggle {
-        display: block; /* إظهار زر القائمة */
-        font-size: 1.3rem;
-        padding: 0 5px;
+        display: block;
     }
 
+    /* حقل البحث ينزل بشكل متناسق ومدمج */
     .search-box input {
-        width: 85px; /* تصغير حقل البحث لينسجم في نفس السطر */
-        padding: 4px 8px;
+        width: 75px;
+        padding: 4px 6px;
         font-size: 0.75rem;
     }
 
-    /* 2. ضبط القائمة المنسدلة */
     .nav-links {
         display: none;
         flex-direction: column;
@@ -188,31 +193,22 @@ body {
         display: flex;
     }
 
-    /* 3. حل مشكلة انقطاع عنوان Welcome */
-    .welcome {
-        padding: 40px 15px 20px; /* تقليل الهامش لتوفير مساحة */
-    }
-
+    /* إصلاح حتمي لقياس النص على الموبايل */
     .welcome h1 {
-        font-size: 1.5rem; /* تصغير الخط ليتناسب مع الشاشة دون انقطاع */
+        font-size: 1.4rem;
         line-height: 1.3;
-        word-wrap: break-word;
     }
 
     .welcome .subtitle {
-        font-size: 0.85rem;
-        margin-bottom: 20px;
+        font-size: 0.8rem;
     }
 
-    /* 4. ضبط الكروت والزر */
     .features {
-        grid-template-columns: 1fr; /* عرض الكروت في عمود واحد */
+        grid-template-columns: 1fr;
         padding: 15px;
-        gap: 15px;
     }
 
     .welcome .btn-primary {
         width: 100%;
-        max-width: 300px; /* إعطاء الزر عرضاً متناسقاً بدلاً من التمدد المفرط */
     }
 }
