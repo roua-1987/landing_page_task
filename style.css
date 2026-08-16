@@ -82,8 +82,7 @@ body {
    ========================================== */
 .features {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 أعمدة متساوية للشاشات الكبيرة */
-    gap: 20px;
+    grid-template-columns: repeat(3, 1fr); 
     padding: 20px;
     max-width: 900px;
     margin: 0 auto;
@@ -120,7 +119,7 @@ body {
 
 @media (max-width: 900px) {
     .features {
-        grid-template-columns: repeat(2, 1fr); /* يتحول إلى عمودين */
+        grid-template-columns: repeat(2, 1fr); 
     }
 }
 
@@ -149,7 +148,6 @@ body {
     }
 }
 
-/* للهواتف الصغيرة - أقل من 576px */
 @media (max-width: 576px) {
     .navbar {
         flex-direction: column; 
@@ -168,6 +166,6 @@ body {
     }
 
     .welcome .btn-primary {
-        width: 100%; /* الزر يتمدد بعرض الشاشة لملاءمة اللمس */
+        width: 100%; 
     }
 }
