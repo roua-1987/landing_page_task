@@ -10,6 +10,9 @@ body {
     color: #333;
 }
 
+/* ==========================================
+   1. شريط الملاحة (Navbar)
+   ========================================== */
 .navbar {
     background-color: #ff7f66;
     display: flex;
@@ -40,6 +43,9 @@ body {
     font-size: 0.85rem;
 }
 
+/* ==========================================
+   2. قسم الترحيب (Welcome Section)
+   ========================================== */
 .welcome {
     text-align: center;
     padding: 60px 20px 30px;
@@ -67,7 +73,7 @@ body {
     border-radius: 5px;
     cursor: pointer;
     font-weight: 500;
-    transition: background-color 0.3s ease, transform 0.3s ease;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .welcome .btn-primary:hover {
@@ -76,9 +82,12 @@ body {
     box-shadow: 0 4px 10px rgba(0, 153, 184, 0.3);
 }
 
+/* ==========================================
+   3. قسم الميزات باستعمال CSS Grid
+   ========================================== */
 .features {
-    display: flex;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 أعمدة متساوية للشاشات الكبيرة */
     gap: 20px;
     padding: 20px;
     max-width: 900px;
@@ -90,13 +99,14 @@ body {
     padding: 25px;
     border-radius: 8px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-    flex: 1;
     text-align: left;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+
 .card:hover {
     transform: translateY(-8px);
     box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15); 
+}
 
 .card h3 {
     font-size: 1.2rem;
@@ -108,50 +118,63 @@ body {
     font-size: 0.85rem;
     color: #666;
 }
-@media (max-width: 768px) {
-    
-    .navbar {
-        flex-direction: column;
-        gap: 15px;
-        padding: 20px;
-        text-align: center;
-    }
 
-    .nav-links {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 10px;
-    }
+/* ==========================================
+   4. التجاوب مع الشاشات (Responsive Design)
+   ========================================== */
 
-    .nav-links a {
-        margin: 0 5px;
-    }
-
-    .search-box input {
-        width: 100%;
-    }
-
+/* للأجهزة المتوسطة (اللابتوب الصغير والأيباد) */
+@media (max-width: 900px) {
     .features {
-        flex-direction: column;
-        padding: 20px 30px;
-    }
-
-    .card {
-        width: 100%;
+        grid-template-columns: repeat(2, 1fr); /* يتحول إلى عمودين */
     }
 }
 
-@media (max-width: 480px) {
-    .hero h1 {
-        font-size: 1.6rem;
+/* للشاشات العادية والهواتف - أقل من 768px */
+@media (max-width: 768px) {
+    .navbar {
+        padding: 12px 20px;
     }
 
-    .hero .subtitle {
+    .logo {
+        font-size: 1rem; /* تصغير اسم الموقع */
+    }
+
+    .nav-links a {
+        margin: 0 8px;
         font-size: 0.85rem;
     }
 
-    .hero .btn-primary {
-        width: 100%; 
+    .search-box input {
+        width: 110px; /* تصغير حقل البحث ليتناسب مع بقية العناصر */
+        padding: 5px 8px;
+        font-size: 0.8rem;
+    }
+
+    .welcome h1 {
+        font-size: 1.8rem;
+    }
+}
+
+/* للهواتف الصغيرة - أقل من 576px */
+@media (max-width: 576px) {
+    .navbar {
+        flex-direction: column; /* ترتيب العناصر رأسياً لمنع التداخل */
+        gap: 12px;
+        padding: 15px;
+    }
+
+    .search-box input {
+        width: 100%; /* يتمدد حقل البحث بالكامل في الهاتف */
+        text-align: center;
+    }
+
+    .features {
+        grid-template-columns: 1fr; /* تتحول الكروت إلى عمود واحد */
+        padding: 20px;
+    }
+
+    .welcome .btn-primary {
+        width: 100%; /* الزر يتمدد بعرض الشاشة لملاءمة اللمس */
     }
 }
