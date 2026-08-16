@@ -55,7 +55,8 @@ html, body {
     border-radius: 4px;
     outline: none;
     font-size: 0.85rem;
-    padding: 6px 12px;
+    padding: 5px 10px;
+    width: 110px;
 }
 
 /* ==========================================
@@ -176,6 +177,11 @@ html, body {
     }
 
     .search-box input {
-        width: 100%;
+       width: 80px; /* تصغير طفيف إضافي للشاشات الضيقة */
+        font-size: 0.75rem;
+    }
+    .custom-navbar .nav-links {
+        text-align: center;
+        padding-top: 10px;
     }
 }
