@@ -12,12 +12,17 @@
 <body>
     <header class="navbar">
         <div class="logo">Landing Page</div>
-        <nav class="nav-links">
+        
+        <!-- زر القائمة الذي يظهر في الشاشات الصغيرة فقط -->
+        <button class="menu-toggle" id="menuToggle">☰</button>
+
+        <nav class="nav-links" id="navLinks">
             <a href="#">Home</a>
             <a href="#">Features</a>
             <a href="#">Pricing</a>
             <a href="#">Dropdown ▾</a>
         </nav>
+
         <div class="search-box">
             <input type="text" placeholder="Search">
         </div>
@@ -43,5 +48,8 @@
             <p>Detail about feature 3.</p>
         </div>
     </section>
+
+    <!-- ربط ملف الجافاسكريبت -->
+    <script src="script.js"></script>
 </body>
 </html>
